@@ -37,4 +37,13 @@ public class DaoBookTest {
     public void Given_list_books_When_add_book_Then_return_exception(){
         assertThrows(IllegalArgumentException.class, () -> dao.addBook("Cien años de soledad"));
     }
+
+    @Test
+    public void Given_list_books_When_remove_book_Then_return_true(){
+        Book book = new Book("Cien años de soledad", 1967, "Gabriel Garcia Marquez", true, HARD_COVER);
+        dao.registerBook(book);
+
+        boolean result = dao.removeBook(book.getName());
+        assertTrue(result);
+    }
 }
