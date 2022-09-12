@@ -1,13 +1,13 @@
 package co.edu.unisabana.usuario.DAO;
 
-import co.edu.unisabana.usuario.repository.dao.BookDao;
-import co.edu.unisabana.usuario.service.library.model.Book;
+import co.edu.unisabana.usuario.persistencia.dao.BookDao;
+import co.edu.unisabana.usuario.negocio.service.library.model.Book;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import static co.edu.unisabana.usuario.service.library.model.CategoryBook.HARD_COVER;
+import static co.edu.unisabana.usuario.negocio.service.library.model.CategoryBook.HARD_COVER;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 @ExtendWith(MockitoExtension.class)

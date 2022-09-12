@@ -1,13 +1,10 @@
 package co.edu.unisabana.usuario.controller;
 
 import co.edu.unisabana.usuario.AbstractTest;
-import co.edu.unisabana.usuario.dto.BookDto;
-import co.edu.unisabana.usuario.dto.BookReponse;
-import co.edu.unisabana.usuario.repository.dao.entity.BookEntity;
-import co.edu.unisabana.usuario.service.library.model.Book;
+import co.edu.unisabana.usuario.presentacion.dto.BookDto;
+import co.edu.unisabana.usuario.presentacion.dto.BookReponse;
+import co.edu.unisabana.usuario.persistencia.dao.entity.BookEntity;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
-import org.mockito.internal.matchers.Null;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.http.ResponseEntity;
