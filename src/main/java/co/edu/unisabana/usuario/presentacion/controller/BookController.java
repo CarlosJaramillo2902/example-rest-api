@@ -1,5 +1,6 @@
 package co.edu.unisabana.usuario.presentacion.controller;
 
+import co.edu.unisabana.usuario.delegados.Delegados;
 import co.edu.unisabana.usuario.presentacion.dto.BookDto;
 import co.edu.unisabana.usuario.presentacion.dto.BookReponse;
 import co.edu.unisabana.usuario.persistencia.dao.entity.BookEntity;
@@ -12,12 +13,11 @@ import java.util.Objects;
 @RequestMapping("/book")
 public class BookController {
 
-    private final RegisterBookLibrary registerBookLibrary;
+    private final Delegados delegados;
 
 
-
-    public BookController(RegisterBookLibrary registerBookLibrary) {
-        this.registerBookLibrary = registerBookLibrary;
+    public BookController(Delegados delegados) {
+        this.delegados = delegados;
     }
 
     // Pendiente validar uso de exception handler
@@ -25,7 +25,7 @@ public class BookController {
     @PostMapping("/register")
     @ResponseBody
     public BookReponse registerBook(@RequestBody BookDto bookDto) {
-        int result = registerBookLibrary.registerBook(bookDto.toModel());
+        int result = delegados.registerBookLibrary.registerBook(bookDto.toModel());
         if (result == 1) {
             return new BookReponse("Actualizada cantidad");
         }
@@ -37,18 +37,18 @@ public class BookController {
     }*/
     @GetMapping("/search/{author}")
     BookEntity bookEntity(@PathVariable String author){
-        if (Objects.nonNull(registerBookLibrary.findbookbyauthor(author))) {
-            return registerBookLibrary.findbookbyauthor(author);
+        if (Objects.nonNull(delegados.registerBookLibrary.findbookbyauthor(author))) {
+            return delegados.registerBookLibrary.findbookbyauthor(author);
         } else {
             return null;
         }
     }
     @DeleteMapping(value = "/remove/{name}")
     int bookEntitydelete(@PathVariable String name){
-        if (Objects.isNull(registerBookLibrary.removebookbyname(name))) {
+        if (Objects.isNull(delegados.registerBookLibrary.removebookbyname(name))) {
             throw new NullPointerException("Escriba un nombre valido");
         } else {
-            return registerBookLibrary.removebookbyname(name);
+            return delegados.registerBookLibrary.removebookbyname(name);
         }
     }
 }

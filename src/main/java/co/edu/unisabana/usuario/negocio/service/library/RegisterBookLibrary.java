@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 import java.util.NoSuchElementException;
 
 @Service
-public class RegisterBookLibrary {
+public class  RegisterBookLibrary {
 
     BookDao bookDao = new BookDao();
 
