@@ -2,9 +2,9 @@ package co.edu.unisabana.usuario.service;
 
 import co.edu.unisabana.usuario.negocio.service.library.RegisterBookLibrary;
 import co.edu.unisabana.usuario.negocio.service.library.model.Book;
-import co.edu.unisabana.usuario.persistencia.dao.port.AddBookPort;
-import co.edu.unisabana.usuario.persistencia.dao.port.RegisterBookPort;
-import co.edu.unisabana.usuario.persistencia.dao.port.SearchBookPort;
+import co.edu.unisabana.usuario.negocio.service.library.port.AddBookPort;
+import co.edu.unisabana.usuario.negocio.service.library.port.RegisterBookPort;
+import co.edu.unisabana.usuario.negocio.service.library.port.SearchBookPort;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
