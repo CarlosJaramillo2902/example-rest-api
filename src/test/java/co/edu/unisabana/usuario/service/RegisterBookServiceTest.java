@@ -1,10 +1,10 @@
 package co.edu.unisabana.usuario.service;
 
-import co.edu.unisabana.usuario.service.library.RegisterBookLibrary;
-import co.edu.unisabana.usuario.service.library.model.Book;
-import co.edu.unisabana.usuario.service.library.port.AddBookPort;
-import co.edu.unisabana.usuario.service.library.port.RegisterBookPort;
-import co.edu.unisabana.usuario.service.library.port.SearchBookPort;
+import co.edu.unisabana.usuario.negocio.service.library.RegisterBookLibrary;
+import co.edu.unisabana.usuario.negocio.service.library.model.Book;
+import co.edu.unisabana.usuario.negocio.service.library.port.AddBookPort;
+import co.edu.unisabana.usuario.negocio.service.library.port.RegisterBookPort;
+import co.edu.unisabana.usuario.negocio.service.library.port.SearchBookPort;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -12,7 +12,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import static co.edu.unisabana.usuario.service.library.model.CategoryBook.HARD_COVER;
+import static co.edu.unisabana.usuario.negocio.service.library.model.CategoryBook.HARD_COVER;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @ExtendWith(MockitoExtension.class)
