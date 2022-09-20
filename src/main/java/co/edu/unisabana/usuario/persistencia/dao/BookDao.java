@@ -51,7 +51,7 @@ public class BookDao implements SearchBookPort, RegisterBookPort, AddBookPort, D
                 }
             }
         }
-        throw new IllegalArgumentException("No existe libro para actualizar");
+        throw new IllegalArgumentException();
     }
     public boolean removeBook(String name) {
         for (BookEntity book : listBooks) {

@@ -1,4 +1,4 @@
-package co.edu.unisabana.usuario.persistencia.dao;
+package co.edu.unisabana.usuario.persistencia.dao.userdao;
 
 import co.edu.unisabana.usuario.negocio.service.model.User;
 import co.edu.unisabana.usuario.negocio.service.user.port.RegisterUserPort;

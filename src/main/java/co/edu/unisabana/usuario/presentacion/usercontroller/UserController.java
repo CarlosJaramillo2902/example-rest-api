@@ -1,4 +1,4 @@
-package co.edu.unisabana.usuario.presentacion.controller;
+package co.edu.unisabana.usuario.presentacion.usercontroller;
 
 
 import co.edu.unisabana.usuario.presentacion.dto.UserDTO;

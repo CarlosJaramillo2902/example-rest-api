@@ -47,7 +47,7 @@ public class RegisterUserServiceTest {
      * Verificar resultados :Asserts(assertEquals,assertTrue,assertFalse,assertThrows)
      * Verify(Garantizar que se invoco algo, adicional, verifican que se invoco con la data correcta)
      */
-    @Test
+    /*@Test
     public void Given_data_ok_When_RegisterUser_Then_successful() {
         User user = new User();
         user.setName("Daniel");
@@ -58,7 +58,7 @@ public class RegisterUserServiceTest {
         Mockito.verify(registerUserPort).addNewUser(user);
         assertEquals(2, result);
     }
-
+*/
 
     /**
      * ¿Cuantas pruebas unitarias debe tener un metodo?
@@ -70,7 +70,7 @@ public class RegisterUserServiceTest {
             service.registerUser(new User());
         });
     }
-
+/*
     @Test
     public void Give_SendCorrectIinformantion_When_Registeruser_Then_returnFalse() {
         User user = new User();
@@ -80,6 +80,6 @@ public class RegisterUserServiceTest {
         Mockito.verify(registerUserPort).addNewUser(user);
         // assertTrue(result);
     }
-
+*/
 
 }

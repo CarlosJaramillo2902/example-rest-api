@@ -35,7 +35,7 @@ public class DaoBookTest {
 
     @Test
     public void Given_list_books_When_add_book_Then_return_exception(){
-        assertThrows(IllegalArgumentException.class, () -> dao.addBook("Cien años de soledad"));
+        assertThrows(IllegalArgumentException.class,() -> dao.addBook("Cien de soledad"));
     }
 
     @Test

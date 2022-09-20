@@ -31,10 +31,6 @@ public class BookController {
         }
         return new BookReponse("Nuevo libro registrado");
     }
-    /*@GetMapping("/search/{author}")
-    public ArrayList<BookEntity> findbookbyauthor(@PathVariable String author){
-        return registerBookLibrary.findbookbyauthor();
-    }*/
     @GetMapping("/search/{author}")
     BookEntity bookEntity(@PathVariable String author){
         if (Objects.nonNull(delegados.registerBookLibrary.findbookbyauthor(author))) {
@@ -43,12 +39,14 @@ public class BookController {
             return null;
         }
     }
-    @DeleteMapping(value = "/remove/{name}")
-    int bookEntitydelete(@PathVariable String name){
-        if (Objects.isNull(delegados.registerBookLibrary.removebookbyname(name))) {
-            throw new NullPointerException("Escriba un nombre valido");
+    @DeleteMapping("/remove/{name}")
+    public BookReponse bookEntitydelete(@PathVariable String name){
+        int result = delegados.registerBookLibrary.removebookbyname(name);
+        if (result ==1)
+        {
+            return new BookReponse("Libro eliminado exitosamente");
         } else {
-            return delegados.registerBookLibrary.removebookbyname(name);
+            return new BookReponse("No existe un libro con ese nombre");
         }
     }
 }

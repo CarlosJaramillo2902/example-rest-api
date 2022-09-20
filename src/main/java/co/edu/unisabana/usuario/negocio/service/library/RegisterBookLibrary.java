@@ -7,6 +7,7 @@ import co.edu.unisabana.usuario.negocio.service.library.port.AddBookPort;
 import co.edu.unisabana.usuario.negocio.service.library.port.DeleteBookPort;
 import co.edu.unisabana.usuario.negocio.service.library.port.RegisterBookPort;
 import co.edu.unisabana.usuario.negocio.service.library.port.SearchBookPort;
+import co.edu.unisabana.usuario.presentacion.dto.BookReponse;
 import org.springframework.stereotype.Service;
 
 import java.util.NoSuchElementException;
@@ -50,7 +51,8 @@ public class  RegisterBookLibrary {
         if (exists){
             deleteBookPort.removeBook(name);
             return 1;
+        } else {
+            return 2;
         }
-        return 2;
     }
 }
