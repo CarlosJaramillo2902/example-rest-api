@@ -1,8 +1,20 @@
 plugins {
 	id 'org.springframework.boot' version '2.7.2'
+	id "org.sonarqube" version "3.4.0.2513"
 	id 'io.spring.dependency-management' version '1.0.12.RELEASE'
 	id 'java'
 	id 'jacoco'
+}
+./gradlew sonarqube \
+  -Dsonar.projectKey=SonarQube-Calculator1 \
+  -Dsonar.host.url=http://localhost:9000 \
+  -Dsonar.login=sqp_bea3595a9d44727ec65839575f22dc7d3a095209
+
+
+sonarqube {
+  properties {
+    property "sonar.projectKey", "SonarQube-Calculator"
+  }
 }
 
 group = 'co.edu.unisabana'
