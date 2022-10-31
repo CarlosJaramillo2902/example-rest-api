@@ -21,6 +21,20 @@ test {
 	useJUnitPlatform()
 	finalizedBy jacocoTestReport
 }
+jacocoTestCoverageVerification {
+    violationRules {
+        rule {
+            limit {
+                minimum = 0.2
+            }
+        }
+    }
+}
+ 
+// Opcionalmente puedes escribir esto si quieres usar Checkstyle.
+checkstyle {
+    checkstyleTest.enabled = true
+}
 
 jacocoTestReport{
 	reports {
