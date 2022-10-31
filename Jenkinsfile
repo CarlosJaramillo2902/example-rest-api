@@ -1,10 +1,7 @@
-node {
-  stage('SCM') {
-    checkout scm
-  }
-  stage('SonarQube Analysis') {
-    withSonarQubeEnv() {
-      sh "./gradlew sonarqube"
+pipeline {
+    agent any
+    triggers {
+        pollSCM('* * * * *')
     }
     stages {
         stage("Compile") {
@@ -33,7 +30,7 @@ node {
                 withSonarQubeEnv('SonarQubePruebas') {
                     sh './gradlew sonarqube'
                 }
-
-  }
+            }
+        }
+    }
 }
-}}
