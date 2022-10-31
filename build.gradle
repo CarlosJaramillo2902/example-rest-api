@@ -6,11 +6,7 @@ plugins {
 	id 'jacoco'
 }
 
-
 sonarqube {
-  properties {
-    property "sonar.projectKey", "SonarQube-Calculator1"
-  }
 }
 
 group = 'co.edu.unisabana'
@@ -38,7 +34,6 @@ jacocoTestCoverageVerification {
         }
     }
 }
-
 
 jacocoTestReport{
 	reports {
