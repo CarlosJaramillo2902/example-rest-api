@@ -30,7 +30,7 @@ node {
         }
         stage('SonarQube analysis') {
             steps {
-                withSonarQubeEnv('SonarQube-Calculator1') {
+                withSonarQubeEnv('SonarQubePruebas') {
                     sh './gradlew sonarqube'
                 }
 
